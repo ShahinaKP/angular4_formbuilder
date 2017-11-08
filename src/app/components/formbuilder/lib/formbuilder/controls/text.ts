@@ -14,7 +14,8 @@ export default class controlText extends control {
     return {
       // mi18n custom mappings (defaults to camelCase type)
       mi18n: {
-        date: 'dateField'
+        date: 'Date',
+        text: 'Text Input'
       },
     };
   }

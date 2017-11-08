@@ -6,7 +6,15 @@
 import {control} from "../control";
 
 export default class controlButton extends control {
+  static get definition() {
+    return {
 
+      // mi18n custom mappings (defaults to camelCase type)
+      mi18n: {
+        button: 'Button'
+      }
+    };
+  }
   /**
    * build a text DOM element, supporting other jquery text form-control's
    * @return {Object} DOM Element to be injected into the form.

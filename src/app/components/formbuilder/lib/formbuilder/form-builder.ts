@@ -16,11 +16,7 @@ import I18N from "./mi18n";
 
 let instanceTime = new Date().getTime();
 
-
-
 export class FormBuilderCreateor {
-
-
   getFormBuilder(opts: any, element: any) {
       return   FormBuilder(opts,element);
     }
@@ -458,11 +454,7 @@ const FormBuilder =  (opts, element) =>{
         const defaultAttrs = [
             'required',
             'label',
-            'description',
             'placeholder',
-            'className',
-            'name',
-            'access',
             'value'
         ];
         let noValFields = [
@@ -480,28 +472,17 @@ const FormBuilder =  (opts, element) =>{
             ]),
             button: [
                 'label',
-                'subtype',
-                'style',
-                'className',
-                'name',
-                'value',
-                'access',
+                'value'
             ],
             checkbox: [
                 'required',
                 'label',
-                'description',
                 'toggle',
-                'inline',
-                'className',
-                'name',
-                'access',
                 'other',
-                'options',
+                'options'
             ],
             text: defaultAttrs.concat([
-                'subtype',
-                'maxlength',
+                'subtype'
             ]),
             date: defaultAttrs,
             file: defaultAttrs.concat([

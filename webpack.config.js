@@ -2,9 +2,7 @@ var path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     CopyWebpackPlugin = require('copy-webpack-plugin');
-    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const extractSASS = new ExtractTextPlugin('./src/app/components/formbuilder/lib/formbuilder/styles/sass/form-builder.scss');
 
 module.exports = {
   entry: {
@@ -33,10 +31,6 @@ module.exports = {
             }, {
                 loader: 'sass-loader',
             }]
-        },
-        {
-          test: /\.sass$/i,
-          use: extractSASS.extract([ 'css-loader', 'sass-loader' ])
         },
       {test: /\.(png|jpg|jpeg|gif|svg|ico)$/, loader: 'file-loader'}
     ]
@@ -72,9 +66,7 @@ module.exports = {
       to: './assets',
       copyUnmodified: true,
       force: true
-    }]),
-    extractSASS
-
+    }])
   ],  
     devServer: {
         port: 4086,

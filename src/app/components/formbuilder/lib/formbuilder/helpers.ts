@@ -1025,24 +1025,34 @@ export default class Helpers {
     processOptions(options) {
         const _this = this;
       let {actionButtons, replaceFields, ...opts} = options;
-    //   actionButtons = [ {
-    //         type: 'button',
-    //         id: 'clear',
-    //         className: 'clear-all btn btn-danger',
-    //         events: {
-    //             click: _this.confirmRemoveAll.bind(_this)
-    //         }
-    //     },{
-    //         type: 'button',
-    //         id: 'save',
-    //         className: 'btn btn-primary save-template',
-    //         events: {
-    //             click: evt => {
-    //                 _this.save();
-    //                 (<any>config).opts.onSave(evt, _this.data.formData);
-    //             }
-    //         }
-    //     }].concat(options.actionButtons);
+      actionButtons = [ {
+            type: 'button',
+            id: 'clear',
+            className: 'clear-all btn btn-danger',
+            events: {
+                click: _this.confirmRemoveAll.bind(_this)
+            }
+        },{
+            type: 'button',
+            label: 'Form Data',
+            id: 'data',
+            className: 'btn btn-default get-data',
+            events: {
+                click: _this.showData.bind(_this)
+            }
+        },
+        {
+            type: 'button',
+            id: 'save',
+            className: 'btn btn-primary save-template',
+            events: {
+                click: evt => {
+                    _this.save();
+                    localStorage.setItem('formData', _this.data.formData );
+                    (<any>config).opts.onSave(evt, _this.data.formData);
+                }
+            }
+        }].concat(options.actionButtons);
         (<any>config).opts = (<any>Object).assign({}, {actionButtons}, opts);
       if ( replaceFields !== undefined )
         opts.disableFields = opts.disableFields.concat(replaceFields.map(({type}) => type && type));

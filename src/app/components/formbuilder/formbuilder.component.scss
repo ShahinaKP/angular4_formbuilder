@@ -132,4 +132,29 @@
   .form-rendered #edit-form {
     display: block;
   }
+
+  .build-wrap {
+      padding: 70px;
+      .form-wrap.form-builder .frmb {
+        border: 1px solid #ddd;
+      }    
+      
+  }
+
+  .form-builder-dialog {
+    overflow-y: hidden !important;
+    left: 50% !important;
+  }
+
+  .form-wrap.form-builder .frmb li .close-field {
+      position: relative;
+      top: 0px;
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 5px 10px;
+  }
+
+  .button-field.form-field[type=button] {
+      -webkit-appearance: none;
+  }
   

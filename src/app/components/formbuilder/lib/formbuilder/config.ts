@@ -96,7 +96,7 @@ export const defaultI18n = {
           className: 'Class',
           clearAllMessage: 'Are you sure you want to clear all fields?',
           clear: 'Clear',
-          close: 'Close',
+          close: 'Save',
           content: 'Content',
           copy: 'Copy To Clipboard',
           copyButton: '&#43;',

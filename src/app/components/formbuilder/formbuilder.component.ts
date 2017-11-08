@@ -54,7 +54,7 @@ function initJq() {
 @Component({
   selector: 'form-builder',
   templateUrl: './formbuilder.component.html',
-  styleUrls: ['./formbuilder.component.scss'],
+  styleUrls: ['./lib/styles/sass/form-builder.scss',  './lib/styles/sass/form-render.scss', './formbuilder.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 
