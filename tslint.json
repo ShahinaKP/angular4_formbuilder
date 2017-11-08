@@ -1,0 +1,34 @@
+{
+    "class-name": true, // Pascal-case (LikeThis)
+    "comment-format": [ // Space before comment ('// like this')
+        true,
+        "check-space"
+    ],
+    "indent": [
+        true,
+        "tabs"
+    ],
+    "no-duplicate-variable": true, // prevent from redeclaring variables in the same scope
+    "no-eval": true, //disable use of eval,
+    "no-trailing-whitespace": true, // prevent leaving spaces or tabs at the end of a line
+    "no-var-keyword": true,
+    "one-line": [ // Opening brace must be on the same line as the statement it is for and it needs to be preceded by a space
+        true,
+        "check-open-brace",
+        "check-whitespace"
+    ],
+    "quotemark": [
+        true,
+        "double"
+    ],
+    "semicolon": false,
+    "triple-equals": [ // Use === && use == and != for null check
+        true,
+        "allow-null-check"
+    ],
+    "variable-name": [ // Varibale in camelCase and constanat in UPPERCASE
+        true,
+        "ban-keywords",
+        "check-format"
+    ],
+}

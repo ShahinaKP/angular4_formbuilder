@@ -1,0 +1,38 @@
+
+.logo:after {
+    content: "";
+    background: url(/assets/images/qb-logo-smaller.png) no-repeat;
+    width: 114px;
+    height: 49px;
+    display: inline-block;
+  }
+  .navbar {
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    background: #1e1e1e;
+    border: none;
+    top: 0;
+    z-index: 5;
+    .header-wrap {
+      display: flex;
+      &.container {
+        padding: 0;
+      }
+      .title-wrap {
+        width: 80%;
+        text-align: center;
+      
+        .title-text {
+          font-size: 22px;
+          color: #505050;
+          margin-top: 10px;
+          font-weight: 700;
+        } 
+      }
+    }
+  }
+  
+  
+   
+  

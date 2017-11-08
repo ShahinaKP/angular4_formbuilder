@@ -1,0 +1,135 @@
+.formbuilder {
+    padding-top: 100px;
+
+    a {
+        color: #75736f;
+    }
+    
+    a:focus,
+    a:hover,
+    a:visited,
+    a:active,
+    a:link {
+        text-decoration: none !important;
+        color: #75736f;
+    }
+    #sideBar {
+        padding-left: 0px;
+        padding-right: 0px;
+        z-index: 2;
+        ul.left-nav {
+            border: 2px solid #75736f;
+            display: inline-block;
+            border-radius: 5px;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                list-style: none;
+                a {
+                    color: #75736f;
+                    padding: 10px 20px;
+                    font-weight: bold;
+                    display: block;
+                }
+                &.active {
+                    background-color: #75736f;
+                    color: white;
+                    a {
+                        color: white; 
+                    }             
+                }
+            }
+        }
+
+        #addFieldTab {
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        
+        #fieldSettingTab {
+            padding: 20px;
+        }
+    }  
+    
+    #main-content {
+        background-color: whitesmoke;
+        border-left: 1px solid #ddd;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 1;
+        overflow-y: auto;
+        #dropZone {
+            min-height: 200px;
+            ul {
+                padding: 0;
+            }
+            li {
+                list-style: none;
+            }
+            .form-group {
+                padding: 10px;
+                position: relative;
+                text-align: left;
+                .input-as-label {
+                    border: none;
+                    box-shadow: none;
+                    display: inline-block;
+                    max-width: 100%;
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                    background-color: transparent;
+                }
+                i.remove-ico {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    cursor: pointer;
+                }
+                i.fa-calendar {
+                    position: absolute;
+                    top: 50px;
+                    right: 20px;
+                }
+                
+            }
+        }
+    }  
+    
+    
+    
+}
+
+
+
+.template-textarea-wrap {
+    display: block !important;
+  }
+  
+  .content {
+    margin: auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-top: 5em;
+  }
+  
+  .form-rendered .build-wrap {
+    display: none;
+  }
+  
+  .render-wrap {
+    display: none;
+  }
+  
+  .form-rendered .render-wrap {
+    display: block;
+  }
+  
+  #edit-form {
+    display: none;
+    float: right;
+  }
+  
+  .form-rendered #edit-form {
+    display: block;
+  }
+  

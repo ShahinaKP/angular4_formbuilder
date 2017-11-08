@@ -1,0 +1,85 @@
+calendar-component {
+    .container {
+        padding-top: 90px;
+        padding-bottom: 60px;
+        .btn {
+            cursor: pointer;
+        }
+        
+        mwl-demo-utils-calendar-header {
+            .btn-primary {
+                background-color: #D46845;
+                border-color: #D46845;
+                &:hover, &:focus, &:active, &.active, &.active:hover,  {
+                    background-color: #DD3C08;
+                    border-color: #DD3C08;
+                }       
+            }
+            .btn-outline-secondary {
+                color: #000;
+                background-image: none;
+                border-color: #DD3C08;
+                &:hover {
+                    color: #fff;
+                    background-color: #DD3C08;
+                }
+            }
+        }
+        
+        .cal-month-view .cal-day-cell {
+            min-height: calc((100vh - 300px)/5);
+        }
+
+        .cal-month-view .cal-cell-top {
+            min-height: 60px;
+        }
+
+        .cal-month-view .cal-day-cell.cal-in-month.cal-has-events {
+            cursor: default;
+        }
+
+        .cal-month-view .cal-event {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 2px;
+            position: relative;
+            cursor: pointer;
+            &:before{
+                position:absolute;
+                content:'';
+                top:-10px;
+                right:-10px;
+                left:-10px;
+                bottom:-10px;
+                z-index:40;
+            }
+        }
+        
+    }
+}
+
+.modal {
+    top: 20%;
+    .modal-body {
+        .event-detail {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    
+        .delete-btn {
+            padding-top: 20px;
+            .btn-primary {
+                background-color: #DD3C08;
+                border-color: #DD3C08;
+            }
+        }
+    }
+}
+
+
+
+
+  
